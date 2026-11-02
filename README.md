@@ -1,20 +1,18 @@
 # Надежда — психолог-консультант
 
-Лендинг для психолога-консультанта Надежды (Telegram @nadeezhda1010).
+Лендинг (Telegram @nadeezhda1010). Версия 2 — по ТЗ правок от 2026-11-02.
 
 ## Структура
-- `index.html` — основной лендинг
-- `styles.css` — стили (светлая тема, бежево-коричневая палитра, шрифты Fraunces + Inter)
-- `script.js` — интерактив + отправка формы в Cloudflare Worker
-- `privacy.html` — политика конфиденциальности
-- `materials.html`, `scripts.html`, `presentation.html`, `outreach.html` — дополнительные материалы для приёма клиентов
+- `index.html`, `styles.css`, `script.js` — лендинг
+- `privacy.html`, `consent.html` — политика и согласие на обработку ПД
+- `materials.html`, `scripts.html`, `presentation.html`, `outreach.html` — доп. материалы
 
 ## Заявки
-Форма отправляет заявки на `https://lead-relay.leestygpt.workers.dev/lead/WTPHQYP66Z`.
-Для получения заявок в Telegram клиенту нужно перейти по ссылке:
-`https://t.me/formsfeedback_bot?start=WTPHQYP66Z`
+POST на `https://lead-relay.leestygpt.workers.dev/lead/WTPHQYP66Z`
+Активация клиентом: `https://t.me/formsfeedback_bot?start=WTPHQYP66Z`
 
-## Заглушки, требующие уточнения
-- Фото (аватар и фото в разделе «Обо мне») — плейсхолдеры с loremflickr, заменить на реальные при получении от клиента
-- Карта в разделе «Контакты» — координаты центра Москвы (заглушка), формат работы онлайн, адрес не требуется
-- Логотип — текстовый, без графического элемента
+## Ждём от клиента / заглушки
+- Фото: блоки `.photo--hero` и `.photo--about` в index.html сейчас с монограммой «Н». Заменить на `<img>` (две разные реальные фотографии, без повторов).
+- Цены: пакеты 10 000 / 16 500, программа 12 000 — подтвердить у клиентки.
+- Телефон не указан (группы — только через Telegram).
+- Отзывы убраны до согласия клиентов.
